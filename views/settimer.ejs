@@ -1,0 +1,49 @@
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+<!-- <div class="job">
+    <div class="job-main" >
+        <div >
+           
+            
+        </div> 
+        <div class="nav-menu">
+            <div class="menu">
+               
+                <a class="btn btn-light btn-sm mr-2" href="/addtimesheets" role="button" style="background-color: #077b8a; color: white;"> <i class="fa fa-plus pr-1" aria-hidden="true"></i> Timesheets </a>
+            </div>
+        </div>
+
+   </div>
+</div> -->
+
+<div class="row">
+    <div class="col-sm-2">
+     <%- include('partials/sidebar3') %>
+    
+    </div>
+    <div class="col-sm-8">
+        <div class="countdown">
+        <div class="timer">
+            <div class="timer__controls">
+              <button data-time="20" class="timer__button">20 Secs</button>
+              <button data-time="300" class="timer__button">Work 5</button>
+              <button data-time="900" class="timer__button">Quick 15</button>
+              <button data-time="1200" class="timer__button">Snack 20</button>
+              <button data-time="3600" class="timer__button">Lunch Break</button>
+              <form name="customForm" id="custom">
+                <input type="text" name="minutes" placeholder="Enter Minutes">
+              </form>
+            </div>
+            <div class="display">
+              <h1 class="display__time-left"></h1>
+              <p class="display__end-time"></p>
+            </div>
+          </div>
+        
+        </div>
+    
+    </div>
+    
+    </div>
+    <%- include('partials/footer') %>
+    

@@ -1,0 +1,130 @@
+<%- include('partials/header') %>
+<div id="ft-form">
+<form action="/addclients" method="post" >
+    <h1>Add Client Record</h1>
+    <fieldset>
+      <label>
+        Record Entered By
+        <input type="text" name="name" required>
+      </label> 
+      
+      <div class="two-cols">
+        <label>
+            Client Name * 
+            <input type="text" name="clientName" required>
+          </label>
+        <label>
+          Currency *
+          <select name="currency" required>
+            <option>Select</option>
+            <option>INR</option>
+            <option>USD</option>
+            <option>EUR</option>
+            <option>JPY</option>
+            <option>GPP</option>
+            <option>AUD</option>
+           </select>
+        </label>
+       
+      </div>
+      <div class="two-cols">
+        <label>
+          Billing Method
+          <select name="bilingmethod" required>
+            <option>Select</option>
+            <option>Hourly Job Rate</option>
+            <option>Hourly User Rate</option>
+            <option>Hourly User Rate-Jobs</option>
+            <option>Hourly User Rate-Projects</option>
+        </select>
+        </label>
+      
+      </div>
+      
+
+    </fieldset>
+   <fieldset>
+    <legend>Contacts</legend>
+    <div class="two-cols">
+      <label>
+        Email Id
+        <input type="email" name="clientId" id="">
+      </label>
+      <label>
+          First Name
+     <input type="text" name="clientfName" id="">
+      </label>
+    </div>
+    <div class="two-cols">
+      <label>
+        Last Name
+        <input type="text" name="clientlName" id="">
+      </label>
+      <label>
+          Phone
+     <input type="number" name="clientPhone" id="">
+      </label>
+    </div>
+    <div class="two-cols">
+      <label>
+        FAX
+        <input type="text" name="clientfax" id="">
+      </label>
+      <label>
+       Mobile
+     <input type="number" name="clientnumber" id="">
+      </label>
+    </div>
+   </fieldset>
+    
+   <fieldset>
+    <legend>Details</legend>
+    <div class="two-cols">
+      <label>
+        Street Address
+        <input type="text" name="streetaddress" id="">
+      </label>
+      <label>
+       City
+     <input type="text" name="clientcity" id="">
+      </label>
+    </div>
+    <div class="two-cols">
+      <label>
+      State/Province
+        <input type="text" name="clientState" id="">
+      </label>
+      <label>
+       ZIP/PIN
+     <input type="number" name="clientzip" id="">
+      </label>
+    </div>
+    <div class="two-cols">
+      <label>
+        Country
+        <input type="text" name="clientcountry" id="">
+      </label>
+      <label>
+       Industry
+     <input type="text" name="clientIndustry" id="">
+      </label>
+    </div>
+    <div class="two-cols">
+      <label>
+        Company Size
+        <input type="text" name="clientcompanySize" id="">
+      </label>
+      <label>
+       Description
+<textarea name="Description" id="" cols="30" rows="3"></textarea>
+      </label>
+    </div>
+   </fieldset>
+    <div class="btns">
+      <!-- <input type="text" name="_gotcha" value="" style="display:none;"> -->
+      <input type="submit" value="Save Record">
+    </div>
+  </form>
+
+</div>
+<%- include('partials/footer') %>

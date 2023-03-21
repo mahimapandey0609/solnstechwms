@@ -1,0 +1,64 @@
+<%- include('partials/header') %>
+<div id="ft-form">
+<form action="/addapprovals" method="post" >
+    <h1>Approve Projects</h1>
+    <fieldset>
+     
+      <label>
+        Record Entered By
+        <input type="text" name="name" required>
+      </label>
+      <div class="two-cols">
+        <label>
+          Period *
+          <select name="period" required>
+            <option>Select</option>
+            <option>Today</option>
+            <option>This Week</option>
+            <option>This Month</option>
+            <option>Last Week</option>
+            <option>Last Month</option>
+            <option>Custom</option>
+           </select>
+        </label>
+        <label>
+          Employee * 
+          <input type="text" name="employee" required>
+        </label>
+      </div>
+      <div class="two-cols">
+        <label>
+          Clients
+          <input type="text" name="clients" id="">
+        </label>
+        <label>
+          Projects
+         <input type="text" name="projects" id="">
+        </label>
+      </div>
+      <div class="two-cols">
+        <label>
+          Jobs
+          <input type="text" name="jobs" id="">
+        </label>
+        <label>
+            Billable Status
+          <select name="billableStatus" required>
+            <option>Select</option>
+            <option>Billable</option>
+            <option>Non-Billable</option>
+           </select>
+        </label>
+      </div>
+      
+    </fieldset>
+   
+    
+    <div class="btns">
+      <!-- <input type="text" name="_gotcha" value="" style="display:none;"> -->
+      <input type="submit" value="Save Record">
+    </div>
+  </form>
+
+</div>
+<%- include('partials/footer') %>

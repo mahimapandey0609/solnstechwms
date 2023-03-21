@@ -1,0 +1,57 @@
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+<div class="row">
+    <div class="col-sm-2">
+     <%- include('partials/sidebar') %>
+    
+    </div>
+    <div class="col-sm-8">
+    
+    
+    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+        <table class="table table-bordered border-2 table-striped mb-0" id="myTable">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Employee ID</th>
+              <th scope="col">Employee Name</th>
+              <th scope="col">Leave Type</th>
+              <th scope="col">From</th>
+              <th scope="col">To</th>
+              <th scope="col">Team Email ID</th>
+              <th scope="col">Reason for leave</th>
+             
+    
+            </tr>
+          </thead>
+          <tbody>
+           
+            <% leave.forEach(function(leave){ %>
+    
+             <tr>
+             
+              <td scope="row"> 
+                <form action="/deleteLeave" method="POST">
+                    <input type="checkbox" name="checkbox" value ="<%= leave._id %>" onclick="this.form.submit()">
+                </form>    
+                </td>
+              <td scope="row"><%= leave.empid %> </td>
+              <td id="data"><%= leave.ename %></td>
+              <td><%= leave.leavetype %> </td>
+              <td><%= leave.leavefrom %></td>
+              <td><%= leave.leaveto %></td>
+              <td><%= leave.teammail %></td>
+              <td><%= leave.reason %></td>
+             
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      
+      </div>
+    </div>
+    
+    </div>
+    <%- include('partials/footer') %>
+    

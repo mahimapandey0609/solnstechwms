@@ -1,0 +1,34 @@
+<%- include('partials/header') %>
+<div class="centered">
+    <div class="container">
+        <section id="content" style="height: 500px; width: 600px;">
+          <form action="/adddesignation" method="POST">
+            <h1>Add Designation</h1>
+           
+            <div>
+              <input type="text" placeholder="Designation Name" required="" id="username" name="desigName"/>
+            </div>
+            <div>
+                <input type="text" placeholder="Mail Alias" required="" id="username" name="Alias"/>
+              </div>
+            
+            <div>
+                <input type="text" placeholder="Added By" required="" id="username" name="addedBy"/>
+              </div>
+              <div>
+               
+                <input type="date" placeholder="Added Time" required="" id="password" name="addedTime"/>
+               
+              </div>
+         
+            
+            <div>
+              <input type="submit" value="Submit" />
+            </div>
+          </form><!-- form -->
+          
+        </section><!-- content -->
+      </div><!-- container -->
+</div>
+
+<%- include('partials/footer') %>

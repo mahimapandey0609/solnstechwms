@@ -1,0 +1,416 @@
+<%- include('partials/header') %>
+<div id="ft-form">
+<form action="/adddirectory" method="POST" >
+  <h1>Add Employee Directory</h1>
+    <fieldset>
+      <legend>Basic Information</legend>
+      
+      <div class="two-cols">
+        <label>
+          Employee Id *
+          <input type="text" name="Empid" required>
+        </label>
+        <label>
+          Employee Name *
+          <input type="text" name="Firstname" required>
+        </label>
+        <!-- <label>
+          Last name *
+          <input type="text" name="Lastname" required>
+        </label> -->
+      </div>
+      <div class="two-cols">
+        <label>
+          Nick Name
+          <input type="text" name="Nickname">
+        </label>
+        <label>
+          Employee Email Address
+          <input type="email" name="employeemail">
+        </label>
+      </div>
+    </fieldset>
+    <fieldset>
+        <legend>Work Information</legend>
+      <div class="two-cols">
+        <label>
+          Department
+          <select name="dept" required>
+            <option>Select</option>
+            <option>Business Development</option>
+            <option>Cluster Head</option>
+            <option>DG Partner</option>
+            <option>FOFO</option>
+            <option>FOCO</option>
+            <option>Franchise</option>
+            <option>Hunman Resource</option>
+            <option>Sales & Marketing</option>
+            <option>Tech & Solutions</option>
+            <option>Telecalling</option>
+            <option>Wealth & Management</option>
+            <option>web Developemnt</option>
+          </select>
+        </label>
+        <label>
+          Designation
+          <select name="designation" required>
+            <option>Select</option>
+            <option>HR</option>
+            <option>COO</option>
+            <option>DEVELOPER</option>
+            <option>MARKETING</option>
+            <option>AREA MANAGER</option>
+            <option>CO-FOUNDER</option>
+            <option>TELE-CALLER</option>
+          </select>
+        </label>
+      </div>
+      <div class="two-cols">
+        <label>
+          Streams
+          <input type="text" name="Streams" required>
+        </label>
+        <label>
+            Solnstech Role
+            <select name="solnstechrole" required>
+              <option>Select</option>
+              <option>Admin</option>
+              <option>Manager</option>
+              <option>Director</option>
+              <option>Team Member</option>
+              <option>Team Incharge</option>
+            </select>
+          </label>
+      </div>
+      <div class="two-cols">
+        <label>
+          Employment Type
+          <select name="emptype" required>
+            <option>Select</option>
+            <option>Permanent</option>
+            <option>On-Contact</option>
+            <option>Temporary</option>
+            <option>Trainee</option>
+           
+          </select>
+        </label>
+        <label>
+           Employee Status
+            <select name="empstatus" required>
+              <option>Select</option>
+              <option>Active</option>
+              <option>Terminated</option>
+              <option>Deceased</option>
+              <option>Resigned</option>
+              <option>Probation</option>
+              <option>Notice Period</option>
+            </select>
+          </label>
+      </div>
+      <div class="two-cols">
+        <label>
+          Date of Joining *
+          <input type="date" name="doj" required>
+        </label>
+        <label>
+          Current Experience *
+          <input type="number" name="Currentexp" required>
+        </label>
+      </div>
+      <label>
+        Total Experience 
+        <input type="number" name="Totalexp" required>
+      </label>
+      <label>
+        Source of Hire 
+        <input type="text" name="sourceofhire" required>
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>Hierarchy Information</legend>
+      <label>
+        Reporting Manager
+        <select name="reportingManager" required>
+            <option>Select</option>
+            <option>CEO</option>
+            <option>Co-Founder</option>
+            <option>Manager</option>
+            <option>Team Leader</option>
+           
+          </select>
+      </label>
+     
+    </fieldset>
+    <fieldset>
+        <legend>Personal Details</legend>
+        <div class="two-cols">
+            <label>
+              Date of Birth *
+              <input type="date" name="dob" required>
+            </label>
+            <label>
+              Expertise *
+             <textarea name="expertise" id="" cols="30" rows="3"></textarea>
+            </label>
+          </div>
+          <div class="two-cols">
+            <label>
+              Age
+              <input type="number" name="age" required>
+            </label>
+            <label>
+              Gender
+              <select name="gender" required>
+                <option>Select</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+               
+               </select>
+            </label>
+          </div>
+          <label>
+            Marital Status
+            <select name="maritalstatus" required>
+              <option>Select</option>
+              <option>Single</option>
+              <option>Married</option>
+             
+             
+             </select>
+          </label>
+          <label>
+            About Me
+           <textarea name="aboutme" id="" cols="30" rows="3"></textarea>
+          </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Identity Information</legend>
+        <div class="two-cols">
+            <label>
+              UAN
+              <input type="number" name="uan" required>
+            </label>
+            <label>
+              PAN
+              <input type="number" name="pan" id="">
+            </label>
+          </div>
+          <label>
+            Aadhar Number
+            <input type="number" name="aadhar" id="">
+          </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Conatct Details</legend>
+        <div class="two-cols">
+            <label>
+                Work Phone Number
+           <input type="tel" name="wpno" id="">
+            </label>
+            <label>
+                Personal Phone Number
+           <input type="tel" name="pno" id="">
+            </label>
+
+        </div>
+        <div class="two-cols">
+            <label>
+                Extension
+           <input type="text" name="extension" id="">
+            </label>
+            <label>
+                Personal Email Address
+           <input type="email" name="pemail" id="">
+            </label>
+
+        </div>
+        <label>
+            Seating Location
+        <input type="text" name="seatinglocation" id="">
+        </label>
+        <label>
+           Tags
+           <textarea name="tags" id="" cols="30" rows="3"></textarea>
+        </label>
+
+        <div class="two-cols">
+            <label>
+                Present Address
+                <div class="form-group mt-3">
+                    <input type="street" 
+                           class="form-control" 
+                           id="autocomplete" 
+                           placeholder="Street"
+                           name="street">
+                    
+                    <input type="city" 
+                           class="form-control" 
+                           id="inputCity" 
+                           placeholder="City"
+                           name="city">
+                    
+                    <input type="state" 
+                           class="form-control" 
+                           id="inputState" 
+                           placeholder="State"
+                           name="state">
+                    
+                    <input type="number" 
+                           class="form-control" 
+                           id="inputZip" 
+                           placeholder="Pin"
+                           name="pin">
+                    
+                   
+                    
+                    <input type="country" 
+                           class="form-control mt-1" 
+                           id="inputCountry" 
+                           placeholder="Country"
+                           name="country">
+                  </div>
+                  
+            </label>
+            <label> Permanent Address : 
+              <input type="checkbox" name="" id="" value="Same as Permanent Address" name="checkbox1">
+              Same as Persent Address
+              
+              <div class="form-group mt-3">
+                <input type="street" 
+                       class="form-control" 
+                       id="autocomplete" 
+                       placeholder="Street"
+                       name="street1">
+                
+                <input type="city" 
+                       class="form-control" 
+                       id="inputCity" 
+                       placeholder="City"
+                       name="city2">
+                
+                <input type="state" 
+                       class="form-control" 
+                       id="inputState" 
+                       placeholder="State"
+                       name="state3">
+                
+                <input type="number" 
+                       class="form-control" 
+                       id="inputZip" 
+                       placeholder="Pin"
+                       name="pin4">
+                
+              <input type="country" 
+                       class="form-control mt-1" 
+                       id="inputCountry" 
+                       placeholder="Country"
+                       name="country5">
+              </div>
+            </label>
+
+        </div>
+    </fieldset>
+    <fieldset>
+      <legend>Separation Information</legend>
+      <label>
+        Date of Exit
+        <input type="date" name="doe" id="">
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Work Experience</legend>
+      <div class="two-cols">
+        <label>
+            Pervious Company Name
+       <input type="text" name="perviouscompanyname" id="">
+        </label>
+        <label>
+            Job Title
+       <input type="text" name="jobtitle" id="">
+        </label>
+
+    </div>
+    <div class="two-cols">
+      <label>
+          From Date
+     <input type="date" name="fromdate" id="">
+      </label>
+      <label>
+          To Date
+     <input type="date" name="todate" id="">
+      </label>
+
+  </div>
+  <div class="two-cols">
+    <label>
+        Job Description
+  <textarea name="jobdescription" id="" cols="30" rows="3"></textarea>
+    </label>
+    <label>
+        Relevant
+        <select name="relevant" required>
+          <option>Select</option>
+          <option>Yes</option>
+          <option>No</option>
+        
+         </select>
+    </label>
+
+</div>
+    </fieldset>
+    <fieldset>
+      <legend>Education Details</legend>
+      <div class="two-cols">
+        <label>
+            Institute Name
+       <input type="text" name="institutename" id="">
+        </label>
+        <label>
+            Degree/Diploma
+       <input type="text" name="degree" id="">
+        </label>
+
+    </div>
+
+  <div class="two-cols">
+    <label>
+        Specialization
+   <input type="text" name="specialization" id="">
+    </label>
+    <label>
+        Date of Completion
+   <input type="date" name="doc" id="">
+    </label>
+
+</div>
+    </fieldset>
+    <fieldset>
+      <legend>Dependent Details</legend>
+      <div class="two-cols">
+        <label>
+            Name
+       <input type="text" name="dependentname" id="">
+        </label>
+        <label>
+            Relationship
+       <input type="text" name="relation" id="">
+        </label>
+  
+    </div>
+    <label>
+      Date of Birth
+ <input type="date" name="relationdob" id="">
+  </label>
+    </fieldset>
+    <div class="btns">
+      <!-- <input type="text" name="_gotcha" value="" style="display:none;"> -->
+      <input type="submit" value="Submit directory">
+    </div>
+  </form>
+
+</div>
+<%- include('partials/footer') %>

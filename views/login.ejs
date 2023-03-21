@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+<div class="centered">
+    <div class="container">
+        <section id="content">
+          <form action="/login" method="POST">
+            <h1>Login Form</h1>
+            <div>
+              <input type="text" placeholder="Username" required="" id="username" name="username"/>
+            </div>
+            <div>
+                <select name="loginoptions" id="loginoptions">
+                    <option value="Select">Select</option>
+                    <option value="As Admin">As Admin</option>
+                    <option value="As Employee">As Employee</option>
+                </select>
+            </div>
+            <div>
+              <input type="password" placeholder="Password" required="" id="password" name="password" />
+            </div>
+            <div>
+              <input type="submit" value="Log in" />
+              <a href="#">Lost your password?</a>
+              <a href="#">Register</a>
+            </div>
+          </form><!-- form -->
+          
+        </section><!-- content -->
+      </div><!-- container -->
+</div>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,69 @@
+<%- include('partials/header') %>
+<div id="ft-form">
+<form action="/addjobs" method="post" >
+    <h1>Job Configuration Details</h1>
+    <fieldset>
+      <label>
+        Record Entered By
+        <input type="text" name="name" required>
+      </label>
+      
+      <div class="two-cols">
+        <label>
+          Job Name *
+          <input type="text" name="jobName" required>
+        </label>
+        <label>
+          Projects * 
+          <input type="text" name="project" required>
+        </label>
+      </div>
+      <div class="two-cols">
+        <label>
+          Start Date
+          <input type="date" name="startDate" id="">
+        </label>
+        <label>
+          End Date
+         <input type="date" name="endDate" id="">
+        </label>
+      </div>
+      <div class="two-cols">
+        <label>
+          Hours
+          <input type="text" name="hours" id="">
+        </label>
+        <label>
+            Billable Status
+          <select name="billableStatus" required>
+            <option>Select</option>
+            <option>Billable</option>
+            <option>Non-Billable</option>
+           </select>
+        </label>
+      </div>
+      <div class="two-cols">
+        <label>
+          Assigned To
+          <input type="text" name="assignedTo" id="">
+        </label>
+        <label>
+          Work Item
+         <input type="text" name="workItem" id="">
+        </label>
+      </div>
+      <label>
+        Description
+     <textarea name="description" id="" cols="30" rows="4"></textarea>
+      </label>
+    </fieldset>
+   
+    
+    <div class="btns">
+      <!-- <input type="text" name="_gotcha" value="" style="display:none;"> -->
+      <input type="submit" value="Save Record">
+    </div>
+  </form>
+
+</div>
+<%- include('partials/footer') %>

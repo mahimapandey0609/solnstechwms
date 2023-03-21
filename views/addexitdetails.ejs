@@ -1,0 +1,130 @@
+<%- include('partials/header') %>
+<div id="ft-form">
+<form action="/addexitdetails" method="post" >
+    <h1>Exit Details Form</h1>
+    <fieldset>
+      <legend>Separation</legend>
+      
+      <div class="two-cols">
+        <label>
+          Employee Name *
+          <input type="text" name="empName" required>
+        </label>
+        <label>
+          Separation Date *
+          <input type="date" name="sepDate" required>
+        </label>
+      </div>
+      <div class="two-cols">
+        <label>
+          Interviewer
+          <select name="interviewer" required>
+            <option>Select</option>
+            <option>Admin</option>
+            <option>Manager</option>
+            <option>Director</option>
+            <option>Team Member</option>
+            <option>Team Incharge</option>
+          </select>
+        </label>
+        <label>
+          Reason for Leaving
+          <select name="reason" required>
+            <option>Select</option>
+            <option>Better Employment Conditions</option>
+            <option>Career Prospect</option>
+            <option>Death</option>
+            <option>Dessertion</option>
+            <option>Dismissed</option>
+            <option>Dissatisfaction with the job</option>
+            <option>Emigrating</option>
+            <option>Health</option>
+            <option>Higher Pay</option>
+            <option>Personality Conflict</option>
+            <option>Retirement</option>
+            <option>Retrenchment</option>
+          </select>
+        </label>
+      </div>
+    </fieldset>
+    <fieldset>
+        <legend>Questionairre</legend>
+      <div class="two-cols">
+        <label>
+            Working for this organization again
+          <select name="workagain" required>
+            <option>Select</option>
+            <option>Yes</option>
+            <option>No</option>
+           </select>
+        </label>
+        <label>
+            What did you like the most of the organization
+          <textarea name="likeabout" id="" cols="30" rows="3"></textarea>
+        </label>
+      </div>
+      <div class="two-cols">
+        <label>
+            Think the organization do to improve staff welfare
+            <textarea name="improveStaff" id="" cols="30" rows="3"></textarea>
+        </label>
+        <label>
+            Anything you wish to share with us
+            <textarea name="sharewithus" id="" cols="30" rows="3"></textarea>
+          </label>
+      </div>
+     
+      
+    </fieldset>
+    <fieldset>
+      <legend>Checklist for Exit Interview</legend>
+      <div class="two-cols">
+      <label>
+        Company Vehicle handed in
+       <input type="text" name="vehicle" id="">
+      </label>
+      <label>
+        All equipments handed in
+       <input type="text" name="equipment" id="">
+      </label>
+    </div>
+    <div class="two-cols">
+        <label>
+            All library books submitted
+         <input type="text" name="library" id="">
+        </label>
+        <label>
+            Security
+         <input type="text" name="security" id="">
+        </label>
+      </div>
+      <div class="two-cols">
+        <label>
+            Exit interview conducted
+         <input type="text" name="exitInterview" id="">
+        </label>
+        <label>
+            Notice period followed
+         <input type="text" name="notice" id="">
+        </label>
+      </div>
+      <div class="two-cols">
+        <label>
+            Resignation letter submitted
+         <input type="text" name="resignationletter" id="">
+        </label>
+        <label>
+            Manager/Supervisor clearance
+         <input type="text" name="clearance" id="">
+        </label>
+      </div>
+    </fieldset>
+    
+    <div class="btns">
+      <!-- <input type="text" name="_gotcha" value="" style="display:none;"> -->
+      <input type="submit" value="Save Record">
+    </div>
+  </form>
+
+</div>
+<%- include('partials/footer') %>

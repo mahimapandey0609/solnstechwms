@@ -1,0 +1,60 @@
+<%- include('partials/header') %>
+<div id="ft-form">
+<form action="/addprojects" method="post" >
+    <h1>Project Configuration Details</h1>
+    <fieldset>
+      <label>
+        Record Entered By
+        <input type="text" name="name" required>
+      </label>
+      
+      <div class="two-cols">
+        <label>
+          Project Name *
+          <input type="text" name="projectName" required>
+        </label>
+        <label>
+          Client Name * 
+          <input type="text" name="clientName" required>
+        </label>
+      </div>
+      <div class="two-cols">
+        <label>
+          Project Cost
+          <input type="number" name="projectCost" id="">
+        </label>
+        <label>
+          Project Head
+         <input type="text" name="projectHead" id="">
+        </label>
+      </div>
+      <div class="two-cols">
+        <label>
+          Project Manager
+          <input type="text" name="projectManager" id="">
+        </label>
+        <label>
+            Project Users
+          <select name="projectUsers" required>
+            <option>Select</option>
+            <option>Users</option>
+            <option>Department</option>
+            <option>Admin</option>
+           </select>
+        </label>
+      </div>
+     <label>
+        Description
+     <textarea name="description" id="" cols="30" rows="4"></textarea>
+      </label>
+    </fieldset>
+   
+    
+    <div class="btns">
+      <!-- <input type="text" name="_gotcha" value="" style="display:none;"> -->
+      <input type="submit" value="Save Record">
+    </div>
+  </form>
+
+</div>
+<%- include('partials/footer') %>

@@ -1,0 +1,53 @@
+<%- include('partials/header') %>
+<div id="ft-form">
+<form action="/addjobschedule" method="post" >
+    <h1>Job Schedule</h1>
+    <fieldset>
+      <label>
+        Record Entered By
+        <input type="text" name="name" required>
+      </label>
+      
+      <div class="two-cols">
+        <label>
+            Client Name 
+            <input type="text" name="Cname" required>
+          </label>
+        <label>
+            Project Name
+         <input type="text" name="Pname" id="">
+        </label>
+       
+      </div>
+      <div class="two-cols">
+        <label>
+          Job Name
+          <input type="text" name="Jname" id="">
+        </label>
+        <label>
+          Date
+         <input type="date" name="date" id="">
+        </label>
+      </div>
+      <div class="two-cols">
+        <label>
+          Time
+          <input type="text" name="Time" id="">
+        </label>
+        <label>
+            Description
+         <textarea name="Description" id="" cols="30" rows="3"></textarea>
+        </label>
+      </div>
+      
+    </fieldset>
+   
+    
+    <div class="btns">
+      <!-- <input type="text" name="_gotcha" value="" style="display:none;"> -->
+      <input type="submit" value="Publish">
+    </div>
+  </form>
+
+</div>
+<%- include('partials/footer') %>

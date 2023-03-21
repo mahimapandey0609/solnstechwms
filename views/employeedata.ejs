@@ -1,0 +1,128 @@
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+
+<div class="job">
+    <div class="job-main" >
+        <div >
+           
+            
+        </div> 
+        <div class="nav-menu">
+            <div class="menu">
+               
+                <a class="btn btn-light btn-sm mr-2" href="/adddirectory" role="button" style="background-color: #077b8a; color: white;"><i class="fa fa-plus pr-1" aria-hidden="true"></i>Add User Directory</a>
+            </div>
+        </div>
+
+   </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-2">
+        <%- include('partials/sidebar2') %>
+
+    </div>
+    <div class="col-sm-8">
+        <div class="table-wrapper-scroll-y my-custom-scrollbar mt-5">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+              <table class="table table-bordered border-2 table-striped mb-0" id="myTable">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col">Employee ID</th>
+                    <th scope="col">First Name</th>
+                    <!-- <th scope="col">Last Name</th> -->
+                    <th scope="col">Nick Name</th>
+                    <th scope="col">Email Address</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Designation</th>
+                    <th scope="col">Streams</th>
+                    <th scope="col">Solnstech Role</th>
+                    <th scope="col">Employment Type</th>
+                    <th scope="col">Employee Status</th>
+                    <th scope="col">Source of hire</th>
+                    <th scope="col">Date of joining</th>
+                    <th scope="col">Current Experience</th>
+                    <th scope="col">Total Experience</th>
+                    <th scope="col">Reporting Manager</th>
+                    <th scope="col">Date of birth</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Marital Status</th>
+                    <th scope="col">About Me</th>
+                    <th scope="col">Expertise</th>
+                    <th scope="col">Work Phone Number </th>
+                    <th scope="col">Extension</th>
+                    <th scope="col">Seating Location</th>
+                    <th scope="col">Tags</th>
+                    <th scope="col">Personal Phone Number </th>
+                    <th scope="col">Personal Email ID</th>
+                   
+                    
+                    <th scope="col">Aadhar Number</th>
+                    <th scope="col">PAN</th>
+                    <th scope="col">UAN</th>
+             </tr>
+                </thead>
+                <tbody>
+                 
+                  <% newEmployee.forEach(function(e){%>
+          
+                   <tr>
+                   
+                    <td scope="row"> 
+                      <form action="/deleteEmployee" method="POST">
+                          <input type="checkbox" name="checkbox" value ="<%= e._id %>" onclick="this.form.submit()">
+                      </form>    
+                      </td>
+                     
+                      <td>
+                        <form action="">
+                        <input type="button" class="btn btn-sm btn-dark" value="Edit" onclick='editRecord(this)'>
+                      </form>
+            
+                      </td>
+                    <td scope="row"><%= e.Empid %> </td>
+                    <td id="data"><%= e.Firstname %></td>
+                    <!-- <td><%= e.Lastname %> </td> -->
+                    <td><%= e.Nickname %></td>
+                    <td><%= e.employeemail %></td>
+                    <td><%= e.dept %></td>
+                    <td><%= e.designation %></td>
+                     <td><%= e.Streams %></td>
+                     <td><%= e.solnstechrole %> </td>
+                    <td><%= e.emptype %></td>
+                    <td><%= e.empstatus %></td>
+                    <td><%= e.sourceofhire %></td>
+                    <td><%= e.doj %></td>
+                    <td><%= e.Currentexp %></td>
+                     <td><%= e.Totalexp %></td>
+                     <td><%= e.reportingManager %> </td>
+                    <td><%= e.dob %></td>
+                
+                    <td><%= e.age %></td>
+                    <td><%= e.gender %></td>
+                    <td><%= e.maritalstatus %></td>
+                    <td><%= e.aboutme %></td>
+                    <td><%= e.expertise %> </td>
+                   <td><%= e.wpno %></td>
+                   <td><%= e.extension %></td>
+                   <td><%= e.seatinglocation %></td>
+                   <td><%= e.tags %></td>
+                   <td><%= e.pno %></td>
+                   <td><%= e.pemail %> </td>
+                  <td><%= e.aadhar %></td>
+                  <td><%= e.pan %></td>
+                  <td><%= e.uan %></td>
+              
+                  </tr>
+                  <% })   %>
+                </tbody>
+              </table>
+            
+            </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %>

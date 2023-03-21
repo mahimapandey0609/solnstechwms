@@ -1,0 +1,334 @@
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+<!-- Navbar top -->
+<div class="navbar-top">
+    <div class="title">
+        <h1>Profile</h1>
+    </div>
+
+    <!-- Navbar -->
+    <ul>
+        <li>
+            <a href="#message">
+                <!-- <span class="icon-count">29</span>
+                <i class="fa fa-envelope fa-2x"></i> -->
+            </a>
+        </li>
+        <li>
+            <a href="#notification">
+                <!-- <span class="icon-count">59</span>
+                <i class="fa fa-bell fa-2x"></i> -->
+            </a>
+        </li>
+        <li>
+            <a href="/employee">
+                <!-- <i class="fa fa-sign-out-alt fa-2x"></i> -->
+            </a>
+        </li>
+    </ul>
+    <!-- End -->
+</div>
+<!-- End -->
+
+
+<!-- Sidenav -->
+<% self.forEach(function(e){ %>
+<div class="sidenav">
+    <div class="profile">
+        <img src="https://imdezcode.files.wordpress.com/2020/02/imdezcode-logo.png" alt="" width="100" height="100">
+
+        <div class="name">
+            <%= e.Firstname  %>
+        </div>
+        <div class="jobs">
+            <%= e.designation %>
+        </div>
+    </div>
+
+    <div class="sidenav-url">
+        <div class="url">
+            <a href="#profile" class="active">Profile</a>
+            <hr style="text-align:center;">
+        </div>
+        
+    </div>
+</div>
+<!-- End -->
+
+<!-- Main -->
+<div class="main">
+    <h2>Basic Information</h2>
+    <div class="card">
+        <div class="card-body">
+            <i class="fa fa-pen fa-xs edit"></i>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Id</td>
+                        <td>:</td>
+                        <td><%= e.Empid %></td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>:</td>
+                        <td><%= e.Firstname %></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>:</td>
+                        <td><%= e.employeemail %></td>
+                    </tr>
+                    <tr>
+                        <td>Nickname</td>
+                        <td>:</td>
+                        <td><%= e.Nickname  %></td>
+                    </tr>
+                    <tr>
+                        <td>Designation</td>
+                        <td>:</td>
+                        <td><%= e.designation %></td>
+                    </tr>
+                    <tr>
+                        <td>Skill</td>
+                        <td>:</td>
+                        <td><%= e.expertise %></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+   
+        <h2>Work Information</h2>
+        <div class="card">
+            <div class="card-body">
+                <i class="fa fa-pen fa-xs edit"></i>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Department</td>
+                            <td>: </td>
+                            <td> <%= e.dept %></td>
+                        </tr>
+                        <tr>
+                            <td>Solnstech Role</td>
+                            <td>: </td>
+                            <td><%= e.solnstechrole %></td>
+                        </tr>
+                        <tr>
+                            <td>Employment Type</td>
+                            <td>:</td>
+                            <td><%=     e.emptype %></td>
+                        </tr>
+                        <tr>
+                            <td>Employee Status</td>
+                            <td>: </td>
+                            <td><%= e.empstatus %></td>
+                        </tr>
+                        <tr>
+                            <td>Date of Joining</td>
+                            <td>: </td>
+                            <td><%= e.doj %></td>
+                        </tr>
+                        <tr>
+                            <td>Total Experience</td>
+                            <td>: </td>
+                            <td><%= e.Totalexp %></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <h2>Personal Information</h2>
+        <div class="card">
+            <div class="card-body">
+                <i class="fa fa-pen fa-xs edit"></i>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Date Of Birth</td>
+                            <td>:</td>
+                            <td><%= e.dob %></td>
+                        </tr>
+                        <tr>
+                            <td>Age</td>
+                            <td>:</td>
+                            <td><%= e.age %></td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td>:</td>
+                            <td><%= e.gender %></td>
+                        </tr>
+                        <tr>
+                            <td>Marital Status</td>
+                            <td>:</td>
+                            <td><%= e.maritalstatus %></td>
+                        </tr>
+                        <tr>
+                            <td>Personal Phone Number</td>
+                            <td>:</td>
+                            <td><%= e.pno %></td>
+                        </tr>
+                        <tr>
+                            <td>About</td>
+                            <td>:</td>
+                            <td><%= e.aboutme %></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+       
+        <h2>Contact Details</h2>
+        <div class="card">
+            <div class="card-body">
+                <i class="fa fa-pen fa-xs edit"></i>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Work Phone Number</td>
+                            <td>:</td>
+                            <td><%= e.wpno %></td>
+                        </tr>
+                        <tr>
+                            <td>Personal Email Address</td>
+                            <td>:</td>
+                            <td><%= e.pemail %></td>
+                        </tr>
+                        <tr>
+                            <td>Extension</td>
+                            <td>:</td>
+                            <td><%= e.extension %></td>
+                        </tr>
+                        <tr>
+                            <td>Seating Location</td>
+                            <td>:</td>
+                            <td><%= e.seatinglocation %></td>
+                        </tr>
+                        <tr>
+                            <td>Tags</td>
+                            <td>:</td>
+                            <td><%= e.tags %></td>
+                        </tr>
+                        <tr>
+                            <td>Source Of Hire</td>
+                            <td>:</td>
+                            <td><%= e.sourceofhire %></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <h2>Personal Address</h2>
+        <div class="card">
+            <div class="card-body">
+                <i class="fa fa-pen fa-xs edit"></i>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Street</td>
+                            <td>:</td>
+                            <td><%= e.street %></td>
+                        </tr>
+                        <tr>
+                            <td>City</td>
+                            <td>:</td>
+                            <td><%= e.city %></td>
+                        </tr>
+                        <tr>
+                            <td>State</td>
+                            <td>:</td>
+                            <td><%= e.state %></td>
+                        </tr>
+                        <tr>
+                            <td>Pin</td>
+                            <td>:</td>
+                            <td><%= e.pin %></td>
+                        </tr>
+                        <tr>
+                            <td>Country</td>
+                            <td>:</td>
+                            <td><%= e.country %></td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <h2>Work Experience</h2>
+        <div class="card">
+            <div class="card-body">
+                <i class="fa fa-pen fa-xs edit"></i>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Pervious Company Name</td>
+                            <td>:</td>
+                            <td><%= e.perviouscompanyname %></td>
+                        </tr>
+                        <tr>
+                            <td>Job Title</td>
+                            <td>:</td>
+                            <td><%= e.jobtitle %></td>
+                        </tr>
+                        <tr>
+                            <td>From Date</td>
+                            <td>:</td>
+                            <td><%= e.fromdate %></td>
+                        </tr>
+                        <tr>
+                            <td>To Date</td>
+                            <td>:</td>
+                            <td><%= e.todate %></td>
+                        </tr>
+                        <tr>
+                            <td>Job Description</td>
+                            <td>:</td>
+                            <td><%= e.sourceofhire %></td>
+                        </tr>
+                        <tr>
+                            <td>Relevant</td>
+                            <td>:</td>
+                            <td><%= e.relevant %></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+       
+
+        <h2>Identity Information</h2>
+        <div class="card">
+            <div class="card-body">
+                <i class="fa fa-pen fa-xs edit"></i>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>UAN</td>
+                            <td>:</td>
+                            <td><%= e.uan %></td>
+                        </tr>
+                        <tr>
+                            <td>PAN</td>
+                            <td>:</td>
+                            <td><%= e.pan %></td>
+                        </tr>
+                        <tr>
+                            <td>Aadhar Number</td>
+                            <td>:</td>
+                            <td><%= e.aadhar %></td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+       
+       
+        <% }) %>
+
+</div>
+<!-- End -->
+
+<%- include('partials/footer') %>

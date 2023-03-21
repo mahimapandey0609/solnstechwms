@@ -1,0 +1,50 @@
+<%- include('partials/header') %>
+<div class="centered">
+    <div class="container">
+        <section id="content" style="height: 500px; width: 600px;">
+          <form action="/adddepartment" method="POST">
+            <h1>Add Department</h1>
+           
+            <div>
+              <input type="text" placeholder="Department Name" required="" id="username" name="deptName"/>
+            </div>
+            <div>
+                <input type="text" placeholder="Mail Alias" required="" id="username" name="Alias"/>
+              </div>
+            <div>
+                <select name="parentDept" id="leavetype" >
+                    <option>Select Parent Department</option>
+                    <option>Business Development</option>
+                    <option>Cluster Head</option>
+                    <option>DG Partner</option>
+                    <option>FOFO</option>
+                    <option>FOCO</option>
+                    <option>Franchise</option>
+                    <option>Hunman Resource</option>
+                    <option>Sales & Marketing</option>
+                    <option>Tech & Solutions</option>
+                    <option>Telecalling</option>
+                    <option>Wealth & Management</option>
+                    <option>web Developemnt</option>
+                </select>
+            </div>
+            <div>
+                <input type="text" placeholder="Added By" required="" id="username" name="addedBy"/>
+              </div>
+              <div>
+               
+                <input type="date" placeholder="Added Time" required="" id="password" name="addedTime"/>
+               
+              </div>
+         
+            
+            <div>
+              <input type="submit" value="Submit" />
+            </div>
+          </form><!-- form -->
+          
+        </section><!-- content -->
+      </div><!-- container -->
+</div>
+
+<%- include('partials/footer') %>

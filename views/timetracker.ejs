@@ -1,0 +1,80 @@
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+<div class="job">
+    <div class="job-main" >
+        <div >
+           
+            
+        </div> 
+        <div class="nav-menu">
+            <div class="menu">
+               
+                <a class="btn btn-light btn-sm mr-2" href="/addtimelogs" role="button" style="background-color: #077b8a; color: white;"> <i class="fa fa-plus pr-1" aria-hidden="true"></i> Time Logs</a>
+            </div>
+        </div>
+
+   </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-2">
+     <%- include('partials/sidebar3') %>
+    
+    </div>
+    <div class="col-sm-8">
+    
+    
+    <div class="table-wrapper-scroll-y my-custom-scrollbar mt-5">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+        <table class="table table-bordered border-2 table-striped mb-0" id="myTable">
+          <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                
+              <th scope="col">Project Name</th>
+              <th scope="col">Job Name</th>
+            
+              <th scope="col">Work Item</th>
+              <th scope="col">Date</th>
+              <th scope="col">Description</th>
+              <th scope="col">Hours</th>
+            
+              <th scope="col">Billable Status</th>
+          
+            </tr>
+          </thead>
+          <tbody>
+           
+          <% timelog.forEach(function(e){%>
+             <tr>
+             
+              <td scope="row"> 
+                <form action="" method="POST">
+                    <input type="checkbox" name="checkbox" value ="<%= %>" onclick="this.form.submit()">
+                </form>    
+            </td>
+            <td>  <a href="" class="btn btn-sm btn-dark">Edit</a></td>
+              
+              <td scope="row"><%= e.pName %> </td>
+              <td id="data"><%= e.jName  %></td>
+              <td><%= e.workItem %> </td>
+              <td><%= e.logTime %></td>
+             
+              <td scope="row"><%= e.description %> </td>
+              <td id="data"><%= e.loghours  %></td>
+              <td><%= e.billableStatus %> </td>
+              
+             
+             
+            </tr>
+          <% }) %>
+          </tbody>
+        </table>
+      
+      </div>
+    </div>
+    
+    </div>
+    <%- include('partials/footer') %>
+    

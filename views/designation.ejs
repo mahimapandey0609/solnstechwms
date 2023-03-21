@@ -1,0 +1,72 @@
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+<div class="job">
+    <div class="job-main" >
+        <div >
+           
+            
+        </div> 
+        <div class="nav-menu">
+            <div class="menu">
+               
+                <a class="btn btn-light btn-sm mr-2" href="/adddesignation" role="button" style="background-color: #077b8a; color: white;"> <i class="fa fa-plus pr-1" aria-hidden="true"></i> Add Record</a>
+            </div>
+        </div>
+
+   </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-2">
+     <%- include('partials/sidebar2') %>
+    
+    </div>
+    <div class="col-sm-8">
+    
+    
+    <div class="table-wrapper-scroll-y my-custom-scrollbar mt-5">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+        <table class="table table-bordered border-2 table-striped mb-0" id="myTable">
+          <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                
+              <th scope="col">Designation Name</th>
+              <th scope="col">Mail Alias</th>
+            
+              <th scope="col">Added By</th>
+              <th scope="col">Added Time</th>
+            </tr>
+          </thead>
+          <tbody>
+           
+            <% designation.forEach(function(designation){ %>
+    
+             <tr>
+             
+              <td scope="row"> 
+                <form action="/deleteDesignation" method="POST">
+                    <input type="checkbox" name="checkbox" value ="<%= designation._id %>" onclick="this.form.submit()">
+                </form>    
+            </td>
+            <td>  <a href="" class="btn btn-sm btn-dark">Edit</a></td>
+              
+              <td scope="row"><%= designation.desigName %> </td>
+              <td id="data"><%= designation.Alias  %></td>
+              <td><%= designation.addedBy %> </td>
+              <td><%= designation.addedTime %></td>
+             
+             
+             
+            </tr>
+            <% })  %>
+          </tbody>
+        </table>
+      
+      </div>
+    </div>
+    
+    </div>
+    <%- include('partials/footer') %>
+    

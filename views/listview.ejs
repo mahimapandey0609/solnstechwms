@@ -1,0 +1,165 @@
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+
+<div class="job">
+    <div class="job-main" >
+        <div >
+           
+            
+        </div> 
+        <div class="nav-menu">
+            <div class="menu">
+               
+                <a class="btn btn-light btn-sm mr-2" href="/applyleave" role="button" style="background-color: #077b8a; color: white;">Apply Leave</a>
+            </div>
+        </div>
+
+   </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-2">
+        <%- include('partials/sidebar') %>
+    </div>
+    <div class="col-sm-8">
+        <div class="container mt-5 ml-5">
+           
+    <div class="listimages">
+                <a href="">
+                   
+                <div class="listimage-box" data-name="LeaveTracker">
+                   
+                    <img src="http://localhost:3000/images/casual2.png" alt="">
+                    <h4 class="head">Casual Leave</h4>
+                    <ul style="list-style: none;">
+                        <li style= "position:absolute; bottom: 40px; left: 15px; color: black;" class="available">
+                      Available : 12 
+                    
+                    </li>
+                    <li style="position:absolute; bottom: 10px; left: 15px ;color: black;" class="booked">
+                        Booked : 
+                    </li>
+                </ul>
+                </div>
+               </a>
+               <a href="">
+                <div class="listimage-box" data-name="TimeTracker">
+                    <img src="http://localhost:3000/images/earned.svg" alt="">
+                    <h4>Earned Leave</h4>
+                    <ul style="list-style: none;">
+                        <li style= "position:absolute; bottom: 40px; left: 15px; color: black;">
+                        Available : 0
+                    </li>
+                    <li style="position:absolute; bottom: 10px; left: 15px ;color: black;">
+                        Booked :
+                    </li>
+                </ul>
+                </div>
+                
+            </a>
+            <a href="">
+                <div class="listimage-box" data-name="Attendance">
+                    <img src="http://localhost:3000/images/withoutpay.png" alt="">
+                    <h4 class="">Leave without pay</h4>
+                    <ul style="list-style: none;">
+                        <li style= "position:absolute; bottom: 40px; left: 15px; color: black;">
+                        Available : 0
+                    </li>
+                    <li style="position:absolute; bottom: 10px; left: 15px ;color: black;">
+                        Booked :
+                    </li>
+                </ul>
+                </div>
+            </a>
+            <a href="">
+                <div class="listimage-box" data-name="passenger">
+                    <img src="http://localhost:3000/images/casual.webp" alt="">
+                    <h4>Maternity Leave</h4>
+                    <ul style="list-style: none;">
+                        <li style= "position:absolute; bottom: 40px; left: 15px; color: black;">
+                        Available : 150
+                        
+                    </li>
+                    <li style="position:absolute; bottom: 10px; left: 15px ;color: black;">
+                        Booked : 0
+                    </li>
+                </ul>
+                </div>
+            </a>
+            <a href="">
+                <div class="listimage-box" data-name="space">
+                    <img src="http://localhost:3000/images/sabbatical.svg" alt="">
+                    <h4>Sabbatical Leave</h4>
+                    <ul style="list-style: none;">
+                        <li style= "position:absolute; bottom: 40px; left: 15px; color: black;">
+                        Available : 0
+                    </li>
+                    <li style="position:absolute; bottom: 10px; left: 15px ;color: black;">
+                        Booked :
+                    </li>
+                </ul>
+                </div>
+            </a>
+            <a href="">
+                <div class="listimage-box" data-name="spiderman">
+                    <img src="http://localhost:3000/images/sick.png" alt="">
+                    <h4>Sick Leave</h4>
+                    <ul style="list-style: none;">
+                        <li style= "position:absolute; bottom: 40px; left: 15px; color: black;">
+                        Available : 12
+                    </li>
+                    <li style="position:absolute; bottom: 10px; left: 15px ;color: black;">
+                        Booked :
+                    </li>
+                </ul>
+                </div>
+            </a>
+            
+            </div>
+        </div>
+        <div class="tablelist-wrapper-scroll-y mylist-custom-scrollbar">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+              <table class="table table-bordered border-2 table-striped mb-0" id="myTable">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Employee ID</th>
+                    <th scope="col">Employee Name</th>
+                    <th scope="col">Leave Type</th>
+                    <th scope="col">From</th>
+                    <th scope="col">To</th>
+                    <th scope="col">Team Email ID</th>
+                    <th scope="col">Reason for leave</th>
+                   
+          
+                  </tr>
+                </thead>
+                <tbody>
+                 
+                    <% leave.forEach(function(leave){ %>
+    
+                        <tr>
+                        
+                         <td scope="row"> 
+                           <form action="/deleteLeave" method="POST">
+                               <input type="checkbox" name="checkbox" value ="<%= leave._id %>" onclick="this.form.submit()">
+                           </form>    
+                           </td>
+                         <td scope="row"><%= leave.empid %> </td>
+                         <td id="data"><%= leave.ename %></td>
+                         <td><%= leave.leavetype %> </td>
+                         <td><%= leave.leavefrom %></td>
+                         <td><%= leave.leaveto %></td>
+                         <td><%= leave.teammail %></td>
+                         <td><%= leave.reason %></td>
+                        
+                       </tr>
+                       <% }) %>
+                </tbody>
+              </table>
+            
+            </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %>

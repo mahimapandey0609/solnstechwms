@@ -1,0 +1,111 @@
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+
+<div class="job">
+    <div class="job-main" >
+        <div >
+           
+            
+        </div> 
+        <div class="nav-menu">
+            <div class="menu">
+               
+                <a class="btn btn-light btn-sm mr-2" href="/addclients" role="button" style="background-color: #077b8a; color: white;"> <i class="fa fa-plus pr-1" aria-hidden="true"></i> Add Clients </a>
+            </div>
+        </div>
+
+   </div>
+</div>
+
+    <div class="row">
+<div class="col-sm-2">
+    <%- include('partials/sidebar4') %>
+</div>
+    <div class="col-sm-8">
+      
+        <!-- <div class="container">
+            <div class="button" id='button-container'>
+            <div id='my-button' class="button-element">
+             <button id='email'  >Clock In</button>
+            </div>
+           <button id="phone">Clock Out</button>
+          </div>
+        
+          </div>
+           -->
+          
+          
+        <div class="main-content">
+            <div class="card-deck card-row-top">
+                <div class="card-container">
+                    <div class="card card-top-first">
+                        <div class="card-header bg-white text-left">
+                            <span>Clock Yourself</span>
+                        </div>
+                           
+                       
+                        <div class="card-body date-body">
+                            <div class="row text-left display-time">
+                                <div class="col-lg-6">
+                                    <p class="clockin"><%= record.clockintime %></p>
+                                    <form action="/clockin" method="post">
+                                        <button type="button" class="clock-btn clock-in btn" onclick="this.form.submit()"> <span>CLOCK IN</span> </button>
+                                     
+                                    </form>
+                                
+                                </div>
+    
+                                <div class="col-lg-6">
+                                    <p class="clockout"><%= record.Clockouttime %></p>
+                                    <form action="/clockout" method="post">
+                                        <button type="button" class="clock-btn clock-out btn" onclick="this.form.submit()"><span>CLOCK OUT</span></button>
+                                    </form>
+                                   
+                                </div>
+                            </div>
+                            
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="table-wrapper-scroll-y my-custom-scrollbar" style="height: 300PX;">
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+                      <table class="table table-bordered border-2 table-striped mb-0" id="myTable">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Clock In</th>
+                            <th scope="col">Clock Out</th>
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                      
+                            <% record.forEach(function(record){ %>
+                           <tr>
+                           
+                            <td scope="row"> 
+                              <form action="" method="POST">
+                                  <input type="checkbox" name="checkbox" value ="" onclick="this.form.submit()">
+                              </form>    
+                              </td>
+                            <td scope="row"><%= record.Todaysdate %> </td>
+                            <td id="data"><%= record.clockintime %></td>
+                            <td><%= record.Clockouttime %> </td>
+                            
+                          </tr>
+                          <% }) %>
+                        </tbody>
+                      </table>
+                    
+                    </div>
+                
+    
+              
+    </div>
+    </div>
+   
+
+
+<%- include('partials/footer') %>

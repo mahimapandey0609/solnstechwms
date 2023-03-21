@@ -1,0 +1,59 @@
+<%- include('partials/header') %>
+<div id="ft-form">
+<form action="/addtimelogs" method="post" >
+    <h1>Log Time</h1>
+    <fieldset>
+     
+      <label>
+        Record Entered By
+        <input type="text" name="name" required>
+      </label>
+      <div class="two-cols">
+        <label>
+          Project Name *
+          <input type="text" name="pName" required>
+        </label>
+        <label>
+          Job Name*
+          <input type="text" name="jName" required>
+        </label>
+      </div>
+      <div class="two-cols">
+        <label>
+          Work Item
+          <input type="text" name="workItem" id="">
+        </label>
+        <label>
+          Date
+         <input type="date" name="logTime" id="">
+        </label>
+      </div>
+      <div class="two-cols">
+        <label>
+          Description
+          <input type="text" name="description" id="">
+        </label>
+        <label>
+          Hours
+         <input type="text" name="loghours" id="">
+        </label>
+      </div>
+      <label>
+        Billable Status
+      <select name="billableStatus" required>
+        <option>Select</option>
+        <option>Billable</option>
+        <option>Non-Billable</option>
+       </select>
+    </label>
+    </fieldset>
+   
+    
+    <div class="btns">
+      <!-- <input type="text" name="_gotcha" value="" style="display:none;"> -->
+      <input type="submit" value="Save Record">
+    </div>
+  </form>
+
+</div>
+<%- include('partials/footer') %>
